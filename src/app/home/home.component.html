@@ -1,0 +1,28 @@
+<section class="sesction">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-narrow">
+        <h1>Hangman</h1>
+        <p>Let's play some hangman!</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-narrow">
+        <mat-form-field [formGroup]="form">
+          <input #username matInput formControlName="username" placeholder="Username" type="text">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-narrow">
+        <button mat-stroked-button color="primary" (click)="createGame()">Create game</button>
+      </div>
+      <div class="column is-narrow">
+        <button mat-stroked-button color="primary">Join game</button>
+      </div>
+      <div class="column is-narrow">
+        <button mat-stroked-button color="primary">Find random game</button>
+      </div>
+    </div>
+  </div>
+</section>

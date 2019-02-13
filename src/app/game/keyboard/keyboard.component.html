@@ -1,0 +1,5 @@
+<div class="keyboard">
+  <div class="row" *ngFor="let row of keyboardLayout">
+    <button mat-flat-button class="letter" *ngFor="let letter of row">{{letter}}</button>
+  </div>
+</div>

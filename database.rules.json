@@ -1,0 +1,43 @@
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    "games": {
+      "$game": {
+        ".write": "!data.exists() && !newData.child('gameInfo').hasChild('connectedPlayers') && !newData.hasChild('secretInfo')",
+        ".validate": "newData.hasChild('gameInfo') && $game.length == 12",
+
+        "gameInfo": {
+          ".write": "!data.exists() && !newData.hasChild('connectedPlayers')",
+          ".read": true,
+          ".validate": "newData.hasChildren(['maxPlayers', 'category'])",
+          "maxPlayers": {
+            ".validate": "newData.isNumber() && newData.val() <= 10"
+          },
+          "category": {
+            ".validate": "newData.isString() && newData.val().length <= 20"
+          },
+          "connectedPlayers": {
+            ".write": false
+          }
+        },
+        "secretInfo": {
+          ".read": false,
+          ".write": false,
+          "word": {
+            ".read": false,
+            ".write": false
+          },
+          "letters": {
+            ".write": false,
+            "correct": {
+              ".write": false
+            }
+          },
+          "updated-on": {
+            ".validate": "newData.isNumber() && now <= newData.val()"
+          }
+        }
+      }
+    }
+  }
+}

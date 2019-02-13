@@ -1,0 +1,28 @@
+[debug] [2019-02-13T02:03:22.060Z] ----------------------------------------------------------------------
+[debug] [2019-02-13T02:03:22.064Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Daniel\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2019-02-13T02:03:22.065Z] CLI Version:   6.3.1
+[debug] [2019-02-13T02:03:22.065Z] Platform:      win32
+[debug] [2019-02-13T02:03:22.065Z] Node Version:  v11.9.0
+[debug] [2019-02-13T02:03:22.070Z] Time:          Wed Feb 13 2019 03:03:22 GMT+0100 (GMT+01:00)
+[debug] [2019-02-13T02:03:22.071Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-13T02:03:22.101Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-13T02:03:22.105Z] > authorizing via signed-in user
+[debug] [2019-02-13T02:03:22.105Z] [iam] checking project hangman-2da4f for permissions ["firebase.projects.get"]
+[debug] [2019-02-13T02:03:22.112Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/hangman-2da4f:testIamPermissions  
+
+[debug] [2019-02-13T02:03:23.136Z] <<< HTTP RESPONSE 200
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-02-13T02:03:24.289Z] Fetching environment
+[debug] [2019-02-13T02:03:24.292Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/hangman-2da4f  
+ 
+[debug] [2019-02-13T02:03:25.213Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T02:03:25.214Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/550307563569:getServerAppConfig  
+ 
+[debug] [2019-02-13T02:03:25.513Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T02:03:25.514Z] Starting @google-cloud/functions-emulator
+[debug] [2019-02-13T02:03:28.059Z] Parsing function triggers
+[debug] [2019-02-13T02:03:28.399Z] Deploying functions locally
+[info] +  functions: helloWorld
+[info] +  functions: newGame
+[info] +  functions: submitLetter

@@ -1,0 +1,26 @@
+<div class="columns is-gapless">
+  <div class="column is-2">
+    <div class="players">
+      <h3>Players</h3>
+      <ul>
+        <li>player1</li>
+        <li>player2</li>
+        <li>player3</li>
+        <li>player4</li>
+      </ul>
+    </div>
+  </div>
+  <div class="column is-8 game">
+    <div class="letters">
+      <div class="letter-group" *ngFor="let group of word">
+        <div class="letter" *ngFor="let letter of group">{{letter}}</div>
+      </div>
+    </div>
+    <div class="keyboard">
+      <hgm-keyboard></hgm-keyboard>
+    </div>
+  </div>
+  <div class="column is-2 chat">
+    chat
+  </div>
+</div>
